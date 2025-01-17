@@ -1,0 +1,10 @@
+Proyecto Python 2 (POO):
+Ideas:
+ Love Letter
+ 4 en raya
+ TCGP
+ Word Guess
+ 
+ MVC:
+  Separar las clases en partes: vista
+  
