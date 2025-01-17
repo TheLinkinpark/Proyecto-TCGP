@@ -5,6 +5,16 @@ Ideas:
  TCGP
  Word Guess
  
- MVC:
-  Separar las clases en partes: vista
-  
+MVC:
+ Separar las clases en partes: vista
+
+Juego TCGP:
+
+FUNCIONAMIENTO DEL JUEGO
+    Abrir sobre
+    El sobre proporciona 5 cartas aleatorias de una biblioteca que contiene todos los Pokemon y sus datos
+    Las cartas nuevas que reciba el jugador se guardarán en una colección como la Pokédex, si le tocan cartas
+    repetidas, se sumarán a esas cartas ya conseguidas.
+    Para la apertura del sobre, se irán impriendo por pantalla las cartas consecutivamente.
+    El primer sobre al iniciar el juego será gratuito, si quieres abrir más, tendrás que superar un pequeño desafío.
+
