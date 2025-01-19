@@ -1,4 +1,5 @@
 import random
+from lista_pokemon import planta, fuego, agua
 
 class Pokemon:
     nombre: str
@@ -16,20 +17,19 @@ class Pokemon:
         return f"Nombre:\n\t{self.nombre}\nTipo:\n\t{self.tipo}\nRareza:\n\t{self.rareza}\nNúmero Pokédex:\n\t"
     
 
-fuego = {
-    "Charmander": "*",
-    "Charmeleon": "**",
-    "Charizard": "***"
-}
+clave_fuego = random.choice(list(fuego.keys()))
+valor_fuego = fuego[clave_fuego]
 
+clave_planta = random.choice(list(planta.keys()))
+valor_planta = planta[clave_planta]
 
-clave_aleatoria_fuego = random.choice(list(fuego.keys()))
-valor_asociado_fuego = fuego[clave_aleatoria_fuego]
+clave_agua = random.choice(list(agua.keys()))
+valor_agua = agua[clave_agua]
 
+# Saco un Pokémon aleatorio de mi lista de Pokémons para cada tipo de sobre
+pokemon_fuego = Pokemon(clave_fuego, "fuego", valor_fuego)
+pokemon_planta = Pokemon(clave_planta, "planta", valor_planta)
+pokemon_agua = Pokemon(clave_agua, "agua", valor_agua)
 
-
-pokemon_fuego = Pokemon(clave_aleatoria_fuego, "fuego", valor_asociado_fuego)
-print(pokemon_fuego)
-
-prueba_cartapkmn = f"******\n{pokemon_fuego.nombre}\n******"
-print(prueba_cartapkmn)
+#prueba_cartapkmn = f"******\n{pokemon_planta.nombre}\n******"
+#print(prueba_cartapkmn)
