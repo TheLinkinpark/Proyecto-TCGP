@@ -1,14 +1,42 @@
-Lista de pokémons 1ª gen
+#Lista de pokémons 1ª gen
 
-Bulbasaur
-Ivysaur
-Venusaur
-Charmander
-Charmeleon
-Charizard
-Squirtle
-Wartortle
-Blastoise
+# Voy a dividir el almacenamiento de los Pokémons en diccionarios por el tipo de Pokémon (planta, fuego...)
+# La clave es el nombre del Pokémon, el valor será la rareza que tiene
+planta = {
+    "Bulbasaur": "*",
+    "Ivysaur": "**",
+    "Venusaur": "***"
+}
+
+fuego = {
+    "Charmander": "*",
+    "Charmeleon": "**",
+    "Charizard": "***"
+}
+
+agua = {
+    "Squirtle": "*",
+    "Wartortle": "**",
+    "Blastoise": "***"
+}
+
+lista_tipos = [planta, fuego, agua]
+
+""" Veneno
+Eléctrico
+Volador
+Bicho
+Normal
+Tierra
+Psiquico
+Lucha
+Roca
+Acero
+Dragón
+
+
+
+
 Caterpie
 Metapod
 Butterfree
@@ -149,4 +177,4 @@ Moltres
 Dratini
 Dragonair
 Dragonite
-Mewtwo
+Mewtwo """
