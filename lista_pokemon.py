@@ -20,7 +20,6 @@ agua = {
     "Blastoise": "***"
 }
 
-lista_tipos = [planta, fuego, agua]
 
 """ Veneno
 Eléctrico
