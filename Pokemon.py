@@ -12,7 +12,7 @@ class Pokemon:
         self.rareza = rareza
     
     def carta_pokemon(self):
-        return f"**************\n* {self.nombre} *\n**************"
+        return f"{'*' * (len(self.nombre) + 4)}\n* {self.nombre} *\n{'*' * (len(self.nombre) + 4)}"
 
     def __str__(self) -> str:
         return f"\nNombre: {self.nombre}\nTipo: {self.tipo}\nRareza: {self.rareza}\n"
@@ -32,11 +32,9 @@ pokemon_fuego = Pokemon(clave_fuego, "fuego", valor_fuego)
 pokemon_planta = Pokemon(clave_planta, "planta", valor_planta)
 pokemon_agua = Pokemon(clave_agua, "agua", valor_agua)
 
-print(pokemon_planta)
-print(pokemon_fuego)
-print(pokemon_agua)
 
-#print(pokemon_fuego.carta_pokemon())
+
+print(pokemon_fuego.carta_pokemon())
 #print(pokemon_planta.carta_pokemon())
 #prueba_cartapkmn = f"******\n{pokemon_planta.nombre}\n******"
 #print(prueba_cartapkmn)
