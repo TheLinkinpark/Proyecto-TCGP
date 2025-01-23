@@ -2,178 +2,74 @@
 
 # Voy a dividir el almacenamiento de los Pokémons en diccionarios por el tipo de Pokémon (planta, fuego...)
 # La clave es el nombre del Pokémon, el valor será la rareza que tiene
-planta = {
+sobre_planta = {
     "Bulbasaur": "*",
     "Ivysaur": "**",
-    "Venusaur": "***"
+    "Venusaur": "****",
+    "Oddish": "*",
+    "Gloom": "**",
+    "Vileplume": "***",
+    "Bellsprout": "*",
+    "Weepinbell": "**",
+    "Victreebel": "***",
+    "Tangela": "**"
 }
 
-fuego = {
+sobre_fuego = {
     "Charmander": "*",
     "Charmeleon": "**",
-    "Charizard": "***"
+    "Charizard": "****",
+    "Vulpix": "**",
+    "Ninetales": "***",
+    "Growlithe": "**",
+    "Arcanine": "***",
+    "Ponyta": "**",
+    "Rapidash": "***",
+    "Magmar": "***"
 }
 
-agua = {
+sobre_agua = {
     "Squirtle": "*",
     "Wartortle": "**",
-    "Blastoise": "***"
+    "Blastoise": "****",
+    "Psyduck": "*",
+    "Golduck": "**",
+    "Poliwag": "*",
+    "Poliwhirl": "**",
+    "Poliwrath": "***",
+    "Tentacool": "*",
+    "Tentacruel": "***"
 }
 
-
-""" Veneno
-Eléctrico
-Volador
-Bicho
-Normal
-Tierra
-Psiquico
-Lucha
-Roca
-Acero
-Dragón
-
-
-
-
-Caterpie
-Metapod
-Butterfree
-Weedle
-Kakuna
-Beedrill
-Pidgey
-Pidgeotto
-Pidgeot
-Rattata
-Raticate
-Spearow
-Fearow
-Ekans
-Arbok
-Pikachu
-Raichu
-Sandshrew
-Sandslash
-Nidoran♀
-Nidorina
-Nidoqueen
-Nidoran♂
-Nidorino
-Nidoking
-Clefairy
-Clefable
-Vulpix
-Ninetales
-Jigglypuff
-Wigglytuff
-Zubat
-Golbat
-Oddish
-Gloom
-Vileplume
-Paras
-Parasect
-Venonat
-Venomoth
-Diglett
-Dugtrio
-Meowth
-Persian
-Psyduck
-Golduck
-Mankey
-Primeape
-Growlithe
-Arcanine
-Poliwag
-Poliwhirl
-Poliwrath
-Abra
-Kadabra
-Alakazam
-Machop
-Machoke
-Machamp
-Bellsprout
-Weepinbell
-Victreebel
-Tentacool
-Tentacruel
-Geodude
-Graveler
-Golem
-Ponyta
-Rapidash
-Slowpoke
-Slowbro
-Magnemite
-Magneton
-Farfetch’d
-Doduo
-Dodrio
-Seel
-Dewgong
-Grimer
-Muk
-Shellder
-Cloyster
-Gastly
-Haunter
-Gengar
-Onix
-Drowzee
-Hypno
-Krabby
-Kingler
-Voltorb
-Electrode
-Exeggcute
-Exeggutor
-Cubone
-Marowak
-Hitmonlee
-Hitmonchan
-Lickitung
-Koffing
-Weezing
-Rhyhorn
-Rhydon
-Chansey
-Tangela
-Kangaskhan
-Horsea
-Seadra
-Goldeen
-Seaking
-Staryu
-Starmie
-Mr. Mime
-Scyther
-Jynx
-Electabuzz
-Magmar
-Pinsir
-Tauros
-Magikarp
-Gyarados
-Lapras
-Ditto
-Eevee
-Vaporeon
-Jolteon
-Flareon
-Porygon
-Omanyte
-Omastar
-Kabuto
-Kabutops
-Aerodactyl
-Snorlax
-Articuno
-Zapdos
-Moltres
-Dratini
-Dragonair
-Dragonite
-Mewtwo """
+num_pokedex = {
+    "Bulbasaur": 1,
+    "Ivysaur": 2,
+    "Venusaur": 3,
+    "Charmander": 4,
+    "Charmeleon": 5,
+    "Charizard": 6,
+    "Squirtle": 7,
+    "Wartortle": 8,
+    "Blastoise": 9,
+    "Vulpix": 10,
+    "Ninetales": 11,
+    "Oddish": 12,
+    "Gloom": 13,
+    "Vileplume": 14,
+    "Psyduck": 15,
+    "Golduck": 16,
+    "Growlithe": 17,
+    "Arcanine": 18,
+    "Poliwag": 19,
+    "Poliwhirl": 20,
+    "Poliwrath": 21,
+    "Bellsprout": 22,
+    "Weepinbell": 23,
+    "Victreebel": 24,
+    "Tentacool": 25,
+    "Tentacruel": 26,
+    "Ponyta": 27,
+    "Rapidash": 28,
+    "Tangela": 29,
+    "Magmar": 30
+}

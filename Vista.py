@@ -1,7 +1,7 @@
 class Vista:
 
-    def bienvenida(self):
-        print("Bienvend@ al Juego de Cartas Coleccionables de Pokémon")
+    def bienvenida(self) -> None:
+        print("¡Bienvend@ al Juego de Cartas Coleccionables de Pokémon!")
         print('''En este juego podrás abrir sobres de Pokémon y coleccionarlas en tu Pokédex.
               Dispones de 3 tipos de sobre para abrir, los cuales son:
               1. Tipo planta
