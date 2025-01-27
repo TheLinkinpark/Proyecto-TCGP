@@ -10,13 +10,18 @@ class Pokemon:
         self.nombre = nombre
         self.tipo = tipo
         self.rareza = rareza
-    
-    def carta_pokemon(self):
-        return f"{'*' * (len(self.nombre) + 4)}\n* {self.nombre} *\n{'*' * (len(self.nombre) + 4)}"
+
 
     def __str__(self) -> str:
         return f"\nNombre: {self.nombre}\nTipo: {self.tipo}\nRareza: {self.rareza}\n"
-    
+
+
+    def carta_pokemon(self) -> None: # Imprime None por alguna razón que desconozco
+        print("\u2500" * 15)
+        print(" CARTA POKÉMON")
+        print(f"{'\u2500' * (len(self.nombre) + 4)}\n| {self.nombre} |\n{'\u2500' * (len(self.nombre) + 4)}")
+        print(f" Tipo: {self.tipo}\n Rareza: {self.rareza}")
+        print("\u2500" * 15)
 
 clave_fuego = random.choice(list(sobre_fuego.keys()))
 valor_fuego = sobre_fuego[clave_fuego]
@@ -34,7 +39,9 @@ pokemon_agua = Pokemon(clave_agua, "agua", valor_agua)
 
 
 
-print(pokemon_fuego.carta_pokemon())
+print(pokemon_planta.carta_pokemon())
+
+print(pokemon_agua)
 #print(pokemon_planta.carta_pokemon())
 #prueba_cartapkmn = f"******\n{pokemon_planta.nombre}\n******"
 #print(prueba_cartapkmn)
