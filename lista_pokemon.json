@@ -1,0 +1,37 @@
+{
+        "Bulbasaur": {
+            "nombre": "Bulbasaur",
+            "rareza": "*",
+            "tipo": "planta",
+            "num_podekex": 1
+        },
+        "Ivysaur": {
+            "nombre": "Ivysaur",
+            "rareza": "**",
+            "tipo": "planta",
+            "num_podekex": 2
+        },
+        "Venusaur": {
+            "nombre": "Venusaur",
+            "rareza": "****",
+            "tipo": "planta",
+            "num_podekex": 3
+        },
+        "Oddish": {
+            "nombre": "Oddish",
+            "rareza": "*",
+            "tipo": "planta",
+            "num_podekex": 4
+        },
+        "Gloom": {
+            "nombre": "Gloom",
+            "rareza": "**",
+            "tipo": "planta",
+            "num_podekex": 5
+        },
+        "Vileplume": "***",
+        "Bellsprout": "*",
+        "Weepinbell": "**",
+        "Victreebel": "***",
+        "Tangela": "**"
+}
