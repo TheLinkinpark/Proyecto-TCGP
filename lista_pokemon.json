@@ -1,37 +1,82 @@
 {
+    "sobre_raices": {
         "Bulbasaur": {
             "nombre": "Bulbasaur",
             "rareza": "*",
             "tipo": "planta",
-            "num_podekex": 1
+            "num_pokedex": 1
         },
         "Ivysaur": {
             "nombre": "Ivysaur",
             "rareza": "**",
             "tipo": "planta",
-            "num_podekex": 2
-        },
+            "num_pokedex": 2
+    },
         "Venusaur": {
             "nombre": "Venusaur",
             "rareza": "****",
             "tipo": "planta",
-            "num_podekex": 3
+            "num_pokedex": 3
         },
         "Oddish": {
             "nombre": "Oddish",
             "rareza": "*",
             "tipo": "planta",
-            "num_podekex": 4
+            "num_pokedex": 43
         },
         "Gloom": {
             "nombre": "Gloom",
             "rareza": "**",
             "tipo": "planta",
-            "num_podekex": 5
+            "num_pokedex": 44
+        }
+    },
+
+
+    "sobre_llamas": {        
+        "Charmander": {
+            "nombre": "Charmander",
+            "rareza": "*",
+            "tipo": "fuego",
+            "num_pokedex": 4
         },
-        "Vileplume": "***",
-        "Bellsprout": "*",
-        "Weepinbell": "**",
-        "Victreebel": "***",
-        "Tangela": "**"
+        "Charmeleon": {
+            "nombre": "Charmeleon",
+            "rareza": "**",
+            "tipo": "fuego",
+            "num_pokedex": 5
+        },
+        "Charizard": {
+            "nombre": "Charizard",
+            "rareza": "****",
+            "tipo": "fuego",
+            "num_pokedex": 6
+        }
+    },
+
+
+
+
+    "sobre_marea": {
+        "Squirtle": {
+            "nombre": "Squirtle",
+            "rareza": "*",
+            "tipo": "agua",
+            "num_pokedex": 7
+        },
+        "Wartortle": {
+            "nombre": "Wartotle",
+            "rareza": "**",
+            "tipo": "agua",
+            "num_pokedex": 8
+        },
+        "Blastoise": {
+            "nombre": "Blastoise",
+            "rareza": "****",
+            "tipo": "agua",
+            "num_pokedex": 9
+        }
+    }
 }
+
+

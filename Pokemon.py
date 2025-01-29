@@ -1,15 +1,17 @@
 import random
-
+import json
 
 class Pokemon:
     nombre: str
     tipo: str
     rareza: str
+    num_pokedex: int
 
-    def __init__(self, nombre, tipo, rareza):
+    def __init__(self, nombre, tipo, rareza, num_pokedex) -> None:
         self.nombre = nombre
         self.tipo = tipo
         self.rareza = rareza
+        self.num_pokedex = num_pokedex
 
 
     def __str__(self) -> str: # Devuelve la carta Pokémon dibujada
@@ -19,10 +21,14 @@ class Pokemon:
 
 
 
+with open('lista_pokemon.json', 'r') as prueba:
+    pokemons = json.load(prueba)
 
 
+clave_raices = random.choice(list(pokemons["sobre_raices"]))
+valor_raices = pokemons["sobre_raices"][clave_raices]
 
 
-    # Saco un Pokémon aleatorio de mi lista de Pokémons para cada tipo de sobre
-
+poke = Pokemon(clave_raices, valor_raices["tipo"], valor_raices["rareza"], valor_raices["num_pokedex"])
+print(poke)
 
