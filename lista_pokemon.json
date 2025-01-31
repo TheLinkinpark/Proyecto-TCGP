@@ -1,53 +1,120 @@
 {
     "sobre_raices": {
         "Bulbasaur": {
-            "nombre": "Bulbasaur",
             "rareza": "*",
             "tipo": "planta",
             "num_pokedex": 1
         },
         "Ivysaur": {
-            "nombre": "Ivysaur",
             "rareza": "**",
             "tipo": "planta",
             "num_pokedex": 2
     },
         "Venusaur": {
-            "nombre": "Venusaur",
             "rareza": "****",
             "tipo": "planta",
             "num_pokedex": 3
         },
         "Oddish": {
-            "nombre": "Oddish",
             "rareza": "*",
             "tipo": "planta",
             "num_pokedex": 43
         },
         "Gloom": {
-            "nombre": "Gloom",
             "rareza": "**",
             "tipo": "planta",
             "num_pokedex": 44
+        },
+        "Vileplume": {
+            "rareza": "***",
+            "tipo": "planta",
+            "num_pokedex": 44
+        },
+        "Bellsprout": {
+            "rareza": "*",
+            "tipo": "planta",
+            "num_pokedex": 69
+        },
+        "Weepinbell": {
+            "rareza": "**",
+            "tipo": "planta",
+            "num_pokedex": 70
+        },
+        "Victreebel": {
+            "rareza": "***",
+            "tipo": "planta",
+            "num_pokedex": 71
+        },
+        "Geodude": {
+            "rareza": "*",
+            "tipo": "roca",
+            "num_pokedex": 74
+        },
+        "Graveler": {
+            "rareza": "**",
+            "tipo": "roca",
+            "num_pokedex": 75
+        },
+        "Golem": {
+            "rareza": "***",
+            "tipo": "roca",
+            "num_pokedex": 76
+        },
+        "Onix": {
+            "rareza": "***",
+            "tipo": "roca",
+            "num_pokedex": 95
+        },
+        "Cubone": {
+            "rareza": "*",
+            "tipo": "tierra",
+            "num_pokedex": 104
+        },
+        "Marowak": {
+            "rareza": "***",
+            "tipo": "tierra",
+            "num_pokedex": 105
+        },
+        "Rhyhorn": {
+            "rareza": "**",
+            "tipo": "tierra",
+            "num_pokedex": 111
+        },
+        "Rhydon": {
+            "rareza": "***",
+            "tipo": "tierra",
+            "num_pokedex": 112
+        },
+        "Tangela": {
+            "rareza": "**",
+            "tipo": "planta",
+            "num_pokedex": 114
+        },
+        "Aerodactyl EX": {
+            "rareza": "*****",
+            "tipo": "roca",
+            "num_pokedex": 150
+        },
+        "Golem EX": {
+            "rareza": "*****",
+            "tipo": "roca",
+            "num_pokedex": 151
         }
     },
 
 
     "sobre_llamas": {        
         "Charmander": {
-            "nombre": "Charmander",
             "rareza": "*",
             "tipo": "fuego",
             "num_pokedex": 4
         },
         "Charmeleon": {
-            "nombre": "Charmeleon",
             "rareza": "**",
             "tipo": "fuego",
             "num_pokedex": 5
         },
         "Charizard": {
-            "nombre": "Charizard",
             "rareza": "****",
             "tipo": "fuego",
             "num_pokedex": 6
@@ -59,19 +126,16 @@
 
     "sobre_marea": {
         "Squirtle": {
-            "nombre": "Squirtle",
             "rareza": "*",
             "tipo": "agua",
             "num_pokedex": 7
         },
         "Wartortle": {
-            "nombre": "Wartotle",
             "rareza": "**",
             "tipo": "agua",
             "num_pokedex": 8
         },
         "Blastoise": {
-            "nombre": "Blastoise",
             "rareza": "****",
             "tipo": "agua",
             "num_pokedex": 9
