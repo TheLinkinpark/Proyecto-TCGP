@@ -1,6 +1,9 @@
 from Pokemon import Pokemon
 import random
-from lista_pokemon import sobre_planta, sobre_fuego, sobre_agua
+import json
+
+with open('lista_pokemon.json', 'r') as p:
+    pokemons = json.load(p)
 
 class Sobre:
     tipo_sobre: str
@@ -13,22 +16,22 @@ class Sobre:
         resultado = ""
         for i in range(5):
             match self.tipo_sobre:
-                case "fuego":
-                    clave_fuego = random.choice(list(sobre_fuego.keys()))
-                    valor_fuego = sobre_fuego[clave_fuego]
-                    poke = Pokemon(clave_fuego, "fuego", valor_fuego)
+                case "llamas":
+                    clave_llamas = random.choice(list(pokemons["sobre_llamas"]))
+                    valor_llamas = pokemons["sobre_llamas"][clave_llamas]
+                    poke = Pokemon(clave_llamas, valor_llamas["tipo"], valor_llamas["rareza"], valor_llamas["num_pokedex"])
                     sobre.append(poke)
 
-                case "agua":
-                    clave_agua = random.choice(list(sobre_agua.keys()))
-                    valor_agua = sobre_agua[clave_agua]
-                    poke = Pokemon(clave_agua, "agua", valor_agua)
+                case "marea":
+                    clave_marea = random.choice(list(pokemons["sobre_marea"]))
+                    valor_marea = pokemons["sobre_marea"][clave_marea]
+                    poke = Pokemon(clave_marea, valor_marea["tipo"], valor_marea["rareza"], valor_marea["num_pokedex"])
                     sobre.append(poke)
 
-                case "planta":
-                    clave_planta = random.choice(list(sobre_planta.keys()))
-                    valor_planta = sobre_planta[clave_planta]
-                    poke = Pokemon(clave_planta, "planta", valor_planta)
+                case "raíces":
+                    clave_raices = random.choice(list(pokemons["sobre_raices"]))
+                    valor_raices = pokemons["sobre_raices"][clave_raices]
+                    poke = Pokemon(clave_raices, valor_raices["tipo"], valor_raices["rareza"], valor_raices["num_pokedex"])
                     sobre.append(poke)
 
 
@@ -36,7 +39,6 @@ class Sobre:
             resultado += str(carta) + "\n"
 
         return f"{resultado}"
-    
-
-p1 = Sobre("agua")
+  
+p1 = Sobre("marea")
 print(p1.abrir_sobre())
