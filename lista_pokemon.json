@@ -18,89 +18,91 @@
         "Oddish": {
             "rareza": "*",
             "tipo": "planta",
-            "num_pokedex": 43
+            "num_pokedex": 14
         },
         "Gloom": {
             "rareza": "**",
             "tipo": "planta",
-            "num_pokedex": 44
+            "num_pokedex": 15
         },
         "Vileplume": {
             "rareza": "***",
             "tipo": "planta",
-            "num_pokedex": 44
+            "num_pokedex": 16
         },
         "Bellsprout": {
             "rareza": "*",
             "tipo": "planta",
-            "num_pokedex": 69
+            "num_pokedex": 27
         },
         "Weepinbell": {
             "rareza": "**",
             "tipo": "planta",
-            "num_pokedex": 70
+            "num_pokedex": 28
         },
         "Victreebel": {
             "rareza": "***",
             "tipo": "planta",
-            "num_pokedex": 71
+            "num_pokedex": 29
         },
         "Geodude": {
             "rareza": "*",
             "tipo": "roca",
-            "num_pokedex": 74
+            "num_pokedex": 32
         },
         "Graveler": {
             "rareza": "**",
             "tipo": "roca",
-            "num_pokedex": 75
+            "num_pokedex": 33
         },
         "Golem": {
             "rareza": "***",
             "tipo": "roca",
-            "num_pokedex": 76
+            "num_pokedex": 34
         },
         "Onix": {
             "rareza": "***",
             "tipo": "roca",
-            "num_pokedex": 95
+            "num_pokedex": 41
         },
         "Cubone": {
             "rareza": "*",
             "tipo": "tierra",
-            "num_pokedex": 104
+            "num_pokedex": 44
         },
         "Marowak": {
             "rareza": "***",
             "tipo": "tierra",
-            "num_pokedex": 105
+            "num_pokedex": 45
         },
         "Rhyhorn": {
             "rareza": "**",
             "tipo": "tierra",
-            "num_pokedex": 111
+            "num_pokedex": 46
         },
         "Rhydon": {
             "rareza": "***",
             "tipo": "tierra",
-            "num_pokedex": 112
+            "num_pokedex": 47
         },
         "Tangela": {
             "rareza": "**",
             "tipo": "planta",
-            "num_pokedex": 114
+            "num_pokedex": 48
         },
         "Aerodactyl EX": {
             "rareza": "*****",
             "tipo": "roca",
-            "num_pokedex": 150
+            "num_pokedex": 55
         },
         "Golem EX": {
             "rareza": "*****",
             "tipo": "roca",
-            "num_pokedex": 151
+            "num_pokedex": 56
         }
     },
+
+
 
 
     "sobre_llamas": {        
@@ -118,6 +120,91 @@
             "rareza": "****",
             "tipo": "fuego",
             "num_pokedex": 6
+        },
+        "Pikachu": {
+            "rareza": "*",
+            "tipo": "eléctrico",
+            "num_pokedex": 10
+        },
+        "Raichu": {
+            "rareza": "**",
+            "tipo": "eléctrico",
+            "num_pokedex": 11
+        },
+        "Vulpix": {
+            "rareza": "**",
+            "tipo": "fuego",
+            "num_pokedex": 12
+        },
+        "Ninetales": {
+            "rareza": "***",
+            "tipo": "fuego",
+            "num_pokedex": 13
+        },
+        "Growlithe": {
+            "rareza": "**",
+            "tipo": "fuego",
+            "num_pokedex": 19
+        },
+        "Arcanine": {
+            "rareza": "***",
+            "tipo": "fuego",
+            "num_pokedex": 20
+        },
+        "Ponyta": {
+            "rareza": "**",
+            "tipo": "fuego",
+            "num_pokedex": 35
+        },
+        "Rapidash": {
+            "rareza": "***",
+            "tipo": "fuego",
+            "num_pokedex": 36
+        },
+        "Magnemite": {
+            "rareza": "**",
+            "tipo": "eléctrico",
+            "num_pokedex": 39
+        },
+        "Magneton": {
+            "rareza": "***",
+            "tipo": "eléctrico",
+            "num_pokedex": 40
+        },
+        "Voltorb": {
+            "rareza": "*",
+            "tipo": "eléctrico",
+            "num_pokedex": 42
+        },
+        "Electrode": {
+            "rareza": "**",
+            "tipo": "eléctrico",
+            "num_pokedex": 43
+        },
+        "Magmar": {
+            "rareza": "**",
+            "tipo": "fuego",
+            "num_pokedex": 49
+        },
+        "Jolteon": {
+            "rareza": "**",
+            "tipo": "eléctrico",
+            "num_pokedex": 53
+        },
+        "Flareon": {
+            "rareza": "**",
+            "tipo": "fuego",
+            "num_pokedex": 54
+        },
+        "Zapdos EX": {
+            "rareza": "*****",
+            "tipo": "eléctrico",
+            "num_pokedex": 57
+        },
+        "Moltres EX": {
+            "rareza": "*****",
+            "tipo": "fuego",
+            "num_pokedex": 58
         }
     },
 
@@ -139,6 +226,91 @@
             "rareza": "****",
             "tipo": "agua",
             "num_pokedex": 9
+        },
+        "Psyduck": {
+            "rareza": "*",
+            "tipo": "agua",
+            "num_pokedex": 17
+        },
+        "Golduck": {
+            "rareza": "**",
+            "tipo": "agua",
+            "num_pokedex": 18
+        },
+        "Poliwag": {
+            "rareza": "*",
+            "tipo": "agua",
+            "num_pokedex": 21
+        },
+        "Poliwhirl": {
+            "rareza": "**",
+            "tipo": "agua",
+            "num_pokedex": 22
+        },
+        "Poliwrath": {
+            "rareza": "***",
+            "tipo": "agua",
+            "num_pokedex": 23
+        },
+        "Abra": {
+            "rareza": "*",
+            "tipo": "psíquico",
+            "num_pokedex": 24
+        },
+        "Kadabra": {
+            "rareza": "**",
+            "tipo": "psíquico",
+            "num_pokedex": 25
+        },
+        "Alakazam": {
+            "rareza": "***",
+            "tipo": "psíquico",
+            "num_pokedex": 26
+        },
+        "Tentacool": {
+            "rareza": "*",
+            "tipo": "agua",
+            "num_pokedex": 30
+        },
+        "Tentacruel": {
+            "rareza": "***",
+            "tipo": "agua",
+            "num_pokedex": 31
+        },
+        "Slowpoke": {
+            "rareza": "*",
+            "tipo": "agua",
+            "num_pokedex": 37
+        },
+        "Slowbro": {
+            "rareza": "**",
+            "tipo": "agua",
+            "num_pokedex": 38
+        },
+        "Magikarp": {
+            "rareza": "*",
+            "tipo": "agua",
+            "num_pokedex": 50
+        },
+        "Gyarados": {
+            "rareza": "***",
+            "tipo": "agua",
+            "num_pokedex": 51
+        },
+        "Vaporeon": {
+            "rareza": "**",
+            "tipo": "agua",
+            "num_pokedex": 52
+        },
+        "Articuno EX": {
+            "rareza": "*****",
+            "tipo": "hielo",
+            "num_pokedex": 59
+        },
+        "Mewtwo": {
+            "rareza": "*****",
+            "tipo": "psíquico",
+            "num_pokedex": 60
         }
     }
 }
