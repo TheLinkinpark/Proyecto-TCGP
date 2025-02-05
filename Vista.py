@@ -1,7 +1,7 @@
 class Vista:
 
     def bienvenida(self) -> None:
-        print("¡Bienvend@ al Juego de Cartas Coleccionables de Pokémon!")
+        print("¡Bienvendx al Juego de Cartas Coleccionables de Pokémon!")
         print('''En este juego podrás abrir sobres de Pokémon y coleccionar las cartas en tu Pokédex.
               Dispones de 3 tipos de sobre para abrir, los cuales son:
               1. Raíces y rocas
@@ -13,7 +13,7 @@ class Vista:
         print('''
             1. Abrir sobre
             2. Ver Pokédex
-            3. Conseguir Puntos
+            3. Ruleta PokéPuntos
             4. Salir''')
 
     def nombre_jugador(self):
@@ -21,6 +21,7 @@ class Vista:
     
     def puntos_abrir_sobre(self, pts_necesarios: bool): # 
         if pts_necesarios:
+            print("Tienes los puntos necesarios para abrir un sobre. ¡A por él!")
             sobre1 = [
         "########################################",
         "#**************************************#",
@@ -65,8 +66,21 @@ class Vista:
         "#*          agua y psíquico          *#",
         "#**************************************#",
         "########################################"
-    ] 
+            ] 
+            return int(input("Introduce el número del sobre que quieres abrir: "))
+    
 
         # Imprimir los sobres en paralelo
         for linea1, linea2, linea3 in zip(sobre1, sobre2, sobre3):
             print(f"{linea1}   {linea2}   {linea3}")
+
+        else:
+                print("No tienes los puntos suficientes para abrir un sobre. ¡Consigue más puntos!")
+
+    def ruleta(self):
+        print("¡Bienvenidx a la Ruleta PokéPuntos!")
+        print('''En esta ruleta podrás conseguir puntos (o perderlos) extra para abrir sobres.
+              Podrás conseguir 0, 5, 10, 20, 50 o 100 puntos. Sin embargo, también puedes perder 10 puntos.
+              Todo dependerá del azar. ¡Buena suerte!''')
+        return input("¿Quieres jugar a la ruleta para conseguir puntos? (s/n): ")
+
