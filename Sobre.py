@@ -1,6 +1,7 @@
 from Pokemon import Pokemon
 import random
 import json
+import time
 
 with open('lista_pokemon.json', 'r') as p:
     pokemons = json.load(p)
@@ -36,6 +37,7 @@ class Sobre:
 
 
         for carta in sobre: # Convierto la lista de cartas en un string
+            
             resultado += str(carta) + "\n"
 
         return f"{resultado}"
