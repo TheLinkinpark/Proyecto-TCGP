@@ -26,13 +26,13 @@ class Vista:
         "########################################",
         "#**************************************#",
         "#*                                    *#",
-        "#*         LLAMAS Y RUGIDOS          *#",
+        "#*         LLAMAS Y RUGIDOS           *#",
         "#*                                    *#",
-        "#*                                   *#",
-        "#*              (o^.^)               *#",
-        "#*              (>🔥<)               *#",
         "#*                                    *#",
-        "#*        ⚡ Pokémons tipo ⚡          *#",
+        "#*              (o^.^)                *#",
+        "#*              (>🔥<)                *#",
+        "#*                                    *#",
+        "#*        ⚡ Pokémons tipo ⚡         *#",
         "#*         fuego y eléctrico          *#",
         "#**************************************#",
         "########################################"
@@ -41,14 +41,14 @@ class Vista:
         "########################################",
         "#**************************************#",
         "#*                                    *#",
-        "#*         RAÍCES Y ROCAS            *#",
+        "#*         RAÍCES Y ROCAS             *#",
         "#*                                    *#",
-        "#*                                   *#",
-        "#*         ⠀🌿⠀(o^.^)🌿             *#",
-        "#*         ⠀🌿⠀(>🍃<)🌿             *#",
         "#*                                    *#",
-        "#*        🌱 Pokémons tipo 🌱        *#",
-        "#*       planta, roca y tierra       *#",
+        "#*         ⠀🌿⠀(o^.^)🌿               *#",
+        "#*         ⠀🌿⠀(>🍃<)🌿               *#",
+        "#*                                    *#",
+        "#*        🌱 Pokémons tipo 🌱         *#",
+        "#*       planta, roca y tierra        *#",
         "#**************************************#",
         "########################################"
             ]
@@ -58,21 +58,21 @@ class Vista:
         "#*                                    *#",
         "#*         MAREAS MÍSTICAS            *#",
         "#*                                    *#",
-        "#*                                   *#",
-        "#*          🌊 (o^.^)🔮             *#",
-        "#*          🌊 (>💧<)🔮             *#",
         "#*                                    *#",
-        "#*        🌊 Pokémons tipo 🌊        *#",
-        "#*          agua y psíquico          *#",
+        "#*          🌊 (o^.^)🔮               *#",
+        "#*          🌊 (>💧<)🔮               *#",
+        "#*                                    *#",
+        "#*        🌊 Pokémons tipo 🌊         *#",
+        "#*          agua y psíquico           *#",
         "#**************************************#",
         "########################################"
             ] 
-            return int(input("Introduce el número del sobre que quieres abrir: "))
     
 
         # Imprimir los sobres en paralelo
-        for linea1, linea2, linea3 in zip(sobre1, sobre2, sobre3):
-            print(f"{linea1}   {linea2}   {linea3}")
+            for linea1, linea2, linea3 in zip(sobre1, sobre2, sobre3):
+                print(f"{linea1}   {linea2}   {linea3}")
+            int(input("Introduce el número del sobre que quieres abrir: "))
 
         else:
                 print("No tienes los puntos suficientes para abrir un sobre. ¡Consigue más puntos!")
@@ -84,3 +84,7 @@ class Vista:
               Todo dependerá del azar. ¡Buena suerte!''')
         return input("¿Quieres jugar a la ruleta para conseguir puntos? (s/n): ")
 
+
+if __name__ == "__main__":
+    prueba = Vista()
+    prueba.puntos_abrir_sobre(True)
