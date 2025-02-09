@@ -1,27 +1,49 @@
+import os
+
 class Vista:
 
     def bienvenida(self) -> None:
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print("=" * 56)
         print("¡Bienvendx al Juego de Cartas Coleccionables de Pokémon!")
-        print('''En este juego podrás abrir sobres de Pokémon y coleccionar las cartas en tu Pokédex.
-              Dispones de 3 tipos de sobre para abrir, los cuales son:
-              1. Llamas y rugidos
-              2. Raíces y rocas
-              3. Mareas místicas
-              ''')
+        print("=" * 56)
+        print('''
+En este juego podrás abrir sobres de Pokémon y coleccionar las cartas en tu Pokédex.
+Dispones de 3 tipos de sobre para abrir, los cuales son:
+    1. Llamas y rugidos
+    2. Raíces y rocas
+    3. Mareas místicas
+
+En ellos podrás encontrar desde cartas muy comunes hasta cartas rarísimas, incluyendo a los Pokémon legendarios.
+Si tienes la suerte de obtener a los 4 Pokémon legendarios que están repartidos entre los 3 sobres, recibirás
+una recompensa digna.
+    ''')
+        
+    def primer_sobre(self):
+        print('''
+Al ser tu primera vez en el juego, has recibido un sobre gratuito para que puedas empezar a conseguir cartas.
+Si quieres seguir abrindo sobres, tendrás que conseguir PokéPuntos jugando en la ruleta.
+''')
+        return input("¿Quieres abrir el sobre? Si dices que no, no podrás volver a obtenerlo (s/n): ")
+    
+    def nombre_jugador(self):
+        jugador = input("Para registrar tu partida. Introduce tu nombre de jugador: ")
+        return jugador
 
     def mostrar_menu(self):
-        print('''
-            1. Abrir sobre
-            2. Ver Pokédex
-            3. Ruleta PokéPuntos
-            4. Salir''')
+        print(f'''
+Menú principal
 
-    def nombre_jugador(self):
-        return input("Introduce tu nombre: ")
+1. Abrir sobre
+2. Ver Pokédex
+3. Ruleta PokéPuntos
+4. Salir''')
+
     
     def puntos_abrir_sobre(self, pts_necesarios: bool): # 
-        if pts_necesarios:
-            print("Tienes los puntos necesarios para abrir un sobre. ¡A por él!")
+        if pts_necesarios or self.primer_sobre() == "s":
+            os.system('cls' if os.name == 'nt' else 'clear')
+            print("¡Vamos a abrir un sobre!")
             sobre1 = [
         "########################################",
         "#**************************************#",
@@ -72,7 +94,8 @@ class Vista:
             # Imprimir los sobres en paralelo
             for linea1, linea2, linea3 in zip(sobre1, sobre2, sobre3):
                 print(f"{linea1}   {linea2}   {linea3}")
-            int(input("Introduce el número del sobre que quieres abrir: "))
+
+            return int(input("Introduce el número del sobre que quieres abrir: "))
 
         else:
                 print("No tienes los puntos suficientes para abrir un sobre. ¡Consigue más puntos!")

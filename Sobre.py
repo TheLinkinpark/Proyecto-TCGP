@@ -41,6 +41,10 @@ class Sobre:
             resultado += str(carta) + "\n"
 
         return f"{resultado}"
-  
-p1 = Sobre("marea")
-print(p1.abrir_sobre())
+
+
+
+
+if __name__ == "__main__":
+    p1 = Sobre("marea")
+    print(p1.abrir_sobre())
