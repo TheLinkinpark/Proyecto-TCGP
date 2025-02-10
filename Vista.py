@@ -41,7 +41,7 @@ Menú principal
 
     
     def puntos_abrir_sobre(self, pts_necesarios: bool): # 
-        if pts_necesarios or self.primer_sobre() == "s":
+        if pts_necesarios: #or self.primer_sobre() == "s":
             os.system('cls' if os.name == 'nt' else 'clear')
             print("¡Vamos a abrir un sobre!")
             sobre1 = [

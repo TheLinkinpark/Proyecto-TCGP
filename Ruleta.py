@@ -20,16 +20,20 @@ class Ruleta:
     def girar_ruleta(self):
         indice_seleccionado = 0
         for num in range(random.randint(10, 20)):
+
             indice_seleccionado = (indice_seleccionado + 1) % len(self.valores)
             self.dibujar_ruleta(indice_seleccionado)
             time.sleep(0.15)
+        
+        resultado = self.valores[indice_seleccionado]
+
         if self.valores[indice_seleccionado] < 0:
-            print(f"Has perdido {abs(self.valores[indice_seleccionado])} puntos...")
+            print(f"Has perdido {abs(resultado)} puntos...")
         else:
-            print(f"¡Has ganado {self.valores[indice_seleccionado]} puntos!")
+            print(f"¡Has ganado {resultado} puntos!")
 
         time.sleep(0.6)
-        return input("¿Quieres volver a jugar a la ruleta PokéPuntos?(s/n) ")
+        return resultado
 
 if __name__ == "__main__":
     r = Ruleta([50, -10, 20, 5, 0, 100, 10])
