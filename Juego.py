@@ -1,4 +1,5 @@
 from Pokemon import Pokemon
+from Pokedex import Pokedex
 from Ruleta import Ruleta
 from Sobre import Sobre
 from Vista import Vista
@@ -6,13 +7,14 @@ from time import sleep
 
 class Juego:
     pokemon: Pokemon
+    pokedex: Pokedex
     sobre: Sobre
     ruleta: Ruleta
     vista: Vista
 
     def __init__(self):
         self.vista = Vista()
-
+        #self.pokedex = Pokedex()
 
     def primer_inicio(self):
         self.vista.bienvenida()
@@ -60,7 +62,7 @@ class Juego:
 
     def jugar(self):
         juego = True
-        pts_sobre = 0
+        pts_sobre = 10
 
         while juego:
             self.vista.mostrar_menu()
@@ -79,7 +81,7 @@ class Juego:
                         self.vista.puntos_abrir_sobre(False)
 
                 case 2:
-                    print("Pokédex")
+                    print(self.pokedex.mostrar_pokedex())
 
                 case 3:
 
