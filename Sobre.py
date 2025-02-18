@@ -23,7 +23,6 @@ class Sobre:
                 case "llamas":
                     clave_llamas = random.choice(list(pokemons["sobre_llamas"]))
                     valor_llamas = pokemons["sobre_llamas"][clave_llamas]
-                    anhadir_pokedex = pokemons["sobre_llamas"][clave_llamas]
                     poke = Pokemon(clave_llamas, valor_llamas["tipo"], valor_llamas["rareza"], valor_llamas["num_pokedex"])
 
                 case "marea":
@@ -35,11 +34,10 @@ class Sobre:
                     clave_raices = random.choice(list(pokemons["sobre_raices"]))
                     valor_raices = pokemons["sobre_raices"][clave_raices]
                     poke = Pokemon(clave_raices, valor_raices["tipo"], valor_raices["rareza"], valor_raices["num_pokedex"])
-            
-            self.pokedex.anhadir_carta(anhadir_pokedex)
              
             sobre.append(poke)
-        
+            
+            self.pokedex.anhadir_carta(sobre)
 
         for carta in sobre: # Convierto la lista de cartas en un string
             

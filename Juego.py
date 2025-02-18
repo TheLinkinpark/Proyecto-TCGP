@@ -14,7 +14,7 @@ class Juego:
 
     def __init__(self):
         self.vista = Vista()
-        #self.pokedex = Pokedex()
+        self.pokedex = Pokedex()
 
     def primer_inicio(self):
         self.vista.bienvenida()
@@ -50,7 +50,7 @@ class Juego:
                     self.sobre = Sobre("raíces")
 
                 case 3:
-                    self.sobre = Sobre("raíces")
+                    self.sobre = Sobre("marea")
             print(self.sobre.abrir_sobre())
 
 
