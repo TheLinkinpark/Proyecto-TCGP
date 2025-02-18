@@ -15,7 +15,16 @@ class Pokemon:
 
 
     def __str__(self) -> str: # Devuelve la carta Pokémon dibujada
-        return f"{'\u2500' * 15}\n CARTA POKÉMON\n{'\u2500' * (len(self.nombre) + 4)}\n| {self.nombre} |\n{'\u2500' * (len(self.nombre) + 4)}\n Tipo: {self.tipo}\n Rareza: {self.rareza}\n Pokédex: nº{self.num_pokedex}\n {'\u2500' * 15}"
+        return f'''
+┌───────────────────┐
+│ {self.nombre.center(17)} │
+├───────────────────┤
+│ {self.tipo.center(17)} │ 
+│ {self.rareza.center(17)} │
+│                   │  
+│ {str(self.num_pokedex).center(17)} │
+└───────────────────┘'''
 
-
-
+if __name__ == "__main__":
+    p = Pokemon("Bulbasaur", "Tipo: eléctrico", "Rareza: *", 1)
+    print(p)

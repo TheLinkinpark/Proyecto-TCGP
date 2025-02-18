@@ -17,7 +17,7 @@ class Sobre:
 
     def abrir_sobre(self):
         sobre = []
-        resultado = ""
+        
         for i in range(5):
             match self.tipo_sobre:
                 case "llamas":
@@ -36,14 +36,13 @@ class Sobre:
                     poke = Pokemon(clave_raices, valor_raices["tipo"], valor_raices["rareza"], valor_raices["num_pokedex"])
              
             sobre.append(poke)
-            
+
             self.pokedex.anhadir_carta(sobre)
 
-        for carta in sobre: # Convierto la lista de cartas en un string
-            
-            resultado += str(carta) + "\n"
+            resultado = " ".join([str(carta) for carta in sobre]) # Convierto la lista de cartas en un string
 
-        return f"{resultado}"
+
+        return resultado
 
 
 

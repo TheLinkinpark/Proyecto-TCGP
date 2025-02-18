@@ -31,9 +31,11 @@ Si quieres seguir abrindo sobres, tendrás que conseguir PokéPuntos jugando en 
         return jugador
 
     def mostrar_menu(self):
+        os.system('cls' if os.name == 'nt' else 'clear')
         print(f'''
-Menú principal
-
+==================
+  Menú principal
+==================
 1. Abrir sobre
 2. Ver Pokédex
 3. Ruleta PokéPuntos
@@ -101,10 +103,13 @@ Menú principal
                 print("No tienes los puntos suficientes para abrir un sobre. ¡Consigue más puntos!")
 
     def jugar_ruleta(self):
+        os.system('cls' if os.name == 'nt' else 'clear')
         print("¡Bienvenidx a la Ruleta PokéPuntos!")
+        print()
         print('''En esta ruleta podrás conseguir puntos (o perderlos) para abrir sobres.
-              Podrás conseguir 0, 5, 10, 20, 50 o 100 puntos. Sin embargo, también puedes llegar a perder 10 puntos.
-              Todo dependerá del azar. ¡Buena suerte!''')
+              
+Podrás conseguir 0, 5, 10, 20, 50 o 100 puntos. Sin embargo, también puedes llegar a perder 10 puntos.
+Todo dependerá del azar. ¡Buena suerte!''')
         return input("¿Quieres jugar a la ruleta para conseguir puntos? (s/n): ")
 
 
