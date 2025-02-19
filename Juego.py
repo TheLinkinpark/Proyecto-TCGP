@@ -106,7 +106,7 @@ class Juego:
                         self.vista.puntos_abrir_sobre(False)
 
                 case 2:
-                    print(self.pokedex.mostrar_pokedex())
+                    self.pokedex.mostrar_pokedex()
 
                 case 3:
 

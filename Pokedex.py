@@ -1,15 +1,19 @@
 import json
 import os
+from tabulate import tabulate
 class Pokedex:
     
     def mostrar_pokedex(self):        
-        if not os.path.exists('pokedex.json'): # Si no existe el archivo, devuelve un diccionario vacío
-            return {}
-        with open('pokedex.json', 'r', encoding="utf-8") as pokedex:
-            try:
-                return json.load(pokedex) # Intenta cargar el archivo, si no puede, devuelve un diccionario vacío
-            except json.JSONDecodeError:
-                return {}
+
+        with open('pokedex.json', 'r', encoding="utf-8") as pokedex:     
+             poke = json.load(pokedex)
+
+        tabla = []
+        for nombre, datos in poke.items():
+            tabla.append([nombre, datos["rareza"], datos["tipo"], datos["num_pokedex"]])
+
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print(tabulate(tabla, headers=["Nombre", "Rareza", "Tipo", "N° Pokédex"], tablefmt="fancy_grid"))
         
     def guardar_pokedex(self, pokedex):
         # Ordenar por número de Pokédex y volver a convertir a diccionario
