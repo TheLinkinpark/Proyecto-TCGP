@@ -15,8 +15,7 @@ Dispones de 3 tipos de sobre para abrir, los cuales son:
     3. Mareas místicas
 
 En ellos podrás encontrar desde cartas muy comunes hasta cartas rarísimas, incluyendo a los Pokémon legendarios.
-Si tienes la suerte de obtener a los 4 Pokémon legendarios que están repartidos entre los 3 sobres, recibirás
-una recompensa digna.
+
     ''')
         
     def primer_sobre(self):
@@ -29,14 +28,16 @@ Si quieres seguir abrindo sobres, tendrás que conseguir PokéPuntos jugando en 
 
     def mostrar_menu(self):
         print(f'''
-==================
-  Menú principal
-==================          
+{"=" * 40}
+{" " * 12}{"MENÚ PRINCIPAL".center(10)}{" " * 40}
+{"=" * 40}         
 
-1. Abrir sobre
-2. Ver Pokédex
-3. Ruleta PokéPuntos
-4. Salir''')
+1. Abrir sobre      3. Ruleta PokéPuntos
+
+2. Ver Pokédex      4. Salir
+
+{"=" * 40}
+''')
 
     
     def puntos_abrir_sobre(self, pts_necesarios: bool): # 
@@ -112,4 +113,4 @@ Todo dependerá del azar. ¡Buena suerte!''')
 
 if __name__ == "__main__":
     prueba = Vista()
-    prueba.puntos_abrir_sobre(True)
+    prueba.mostrar_menu()
