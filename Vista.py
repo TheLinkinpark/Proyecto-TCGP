@@ -26,16 +26,13 @@ Si quieres seguir abrindo sobres, tendrás que conseguir PokéPuntos jugando en 
 ''')
         return input("¿Quieres abrir el sobre? Si dices que no, no podrás volver a obtenerlo (s/n): ")
     
-    def nombre_jugador(self):
-        jugador = input("Para registrar tu partida. Introduce tu nombre de jugador: ")
-        return jugador
 
     def mostrar_menu(self):
-        os.system('cls' if os.name == 'nt' else 'clear')
         print(f'''
 ==================
   Menú principal
-==================
+==================          
+
 1. Abrir sobre
 2. Ver Pokédex
 3. Ruleta PokéPuntos
@@ -43,7 +40,7 @@ Si quieres seguir abrindo sobres, tendrás que conseguir PokéPuntos jugando en 
 
     
     def puntos_abrir_sobre(self, pts_necesarios: bool): # 
-        if pts_necesarios: #or self.primer_sobre() == "s":
+        if pts_necesarios:
             os.system('cls' if os.name == 'nt' else 'clear')
             print("¡Vamos a abrir un sobre!")
             sobre1 = [

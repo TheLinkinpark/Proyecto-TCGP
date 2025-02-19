@@ -5,6 +5,7 @@ from Sobre import Sobre
 from Vista import Vista
 from time import sleep
 
+
 class Juego:
     pokemon: Pokemon
     pokedex: Pokedex
@@ -20,14 +21,24 @@ class Juego:
         self.vista.bienvenida()
         sleep(1)
 
+
+
         primer_sobre = self.vista.primer_sobre()
         
         while primer_sobre != "s" and primer_sobre != "n":
             primer_sobre = input("Has introducido un valor no correspondido. Vuelve a intentarlo: ")
 
+
         if  primer_sobre == "s":
+
+            op_sobre = self.vista.puntos_abrir_sobre(True) # Paso a una variable el sobre elegido por el jugador
+
+            while op_sobre < 1 or op_sobre > 3: # Compruebo que el jugador escoge una opción válida
+                op_sobre = int(input("Opción no válida, vuelve a introducirla: "))
+
             sleep(1)
-            match self.vista.puntos_abrir_sobre(True):
+            match op_sobre:
+
                 case 1:
                     self.sobre = Sobre("llamas")
                 
@@ -36,13 +47,24 @@ class Juego:
 
                 case 3:
                     self.sobre = Sobre("raíces")
+
+
+            print("Espera unos segundos, se están generando las cartas...")
+            sleep(2)       
             print(self.sobre.abrir_sobre())
         else:
              print("Has desaprovechado esta oportunidad, es una pena...")
 
 
     def opcion_sobre(self): # Si el jugador elige abrir un sobre, el método jugar llamará a este método
-            match self.vista.puntos_abrir_sobre(True):
+            
+            op_sobre = self.vista.puntos_abrir_sobre(True) # Paso a una variable el sobre elegido por el jugador
+
+            while op_sobre < 1 or op_sobre > 3: # Compruebo que el jugador escoge una opción válida
+                op_sobre = int(input("Opción no válida, vuelve a introducirla: "))
+
+
+            match op_sobre:
                 case 1:
                     self.sobre = Sobre("llamas")
                 
@@ -51,6 +73,8 @@ class Juego:
 
                 case 3:
                     self.sobre = Sobre("marea")
+            print("Espera unos segundos, se están generando las cartas...")
+            sleep(2)
             print(self.sobre.abrir_sobre())
 
 
@@ -65,11 +89,12 @@ class Juego:
         pts_sobre = 10
 
         while juego:
+            
             self.vista.mostrar_menu()
             opcion = int(input("Introduce tu opción: "))
 
-            while opcion < 1 and opcion > 4:
-                print("Opción no válida, vuelve a introducirla: ")
+            while opcion < 1 or opcion > 4: # Compruebo que el jugador escoge una opción válida para el menú
+                opcion = int(input("Opción no válida, vuelve a introducirla: "))
 
 
             match opcion:
