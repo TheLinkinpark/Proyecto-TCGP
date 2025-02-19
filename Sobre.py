@@ -2,7 +2,6 @@ from Pokemon import Pokemon
 from Pokedex import Pokedex
 import random
 import json
-import time
 
 with open('lista_pokemon.json', 'r', encoding="utf-8") as p:
     pokemons = json.load(p)

@@ -4,7 +4,7 @@ from Ruleta import Ruleta
 from Sobre import Sobre
 from Vista import Vista
 from time import sleep
-
+import os
 
 class Juego:
     pokemon: Pokemon
@@ -52,6 +52,8 @@ class Juego:
             print("Espera unos segundos, se están generando las cartas...")
             sleep(2)       
             print(self.sobre.abrir_sobre())
+
+            tecla = input("Pulsa cualquier tecla para continuar: ")
         else:
              print("Has desaprovechado esta oportunidad, es una pena...")
 
@@ -77,6 +79,8 @@ class Juego:
             sleep(2)
             print(self.sobre.abrir_sobre())
 
+            tecla = input("Pulsa cualquier tecla para continuar: ")
+
 
     def opcion_ruleta(self): # Al igual que opcion_sobre, si el jugador decide jugar a la ruleta, se llamará a este método
         r = Ruleta([50, -10, 20, 5, 0, 100, 10])
@@ -89,7 +93,7 @@ class Juego:
         pts_sobre = 10
 
         while juego:
-            
+            os.system('cls' if os.name == 'nt' else 'clear')
             self.vista.mostrar_menu()
             opcion = int(input("Introduce tu opción: "))
 
@@ -106,7 +110,8 @@ class Juego:
                         self.vista.puntos_abrir_sobre(False)
 
                 case 2:
-                    self.pokedex.mostrar_pokedex()
+                    self.pokedex.enseñar_pokedex()
+                    tecla = input("Pulsa cualquier tecla para volver al menú principal: ")
 
                 case 3:
 

@@ -1,31 +1,37 @@
 import json
 import os
 from tabulate import tabulate
+
 class Pokedex:
     
-    def mostrar_pokedex(self):        
+    def inciar_pokedex(self):          
+        with open('pokedex.json', 'r', encoding="utf-8") as pokedex:
+            try:
+                return json.load(pokedex) # Intenta cargar el archivo, si no puede, devuelve un diccionario vacío
+            except json.JSONDecodeError:
+                return {}
+            
 
-        with open('pokedex.json', 'r', encoding="utf-8") as pokedex:     
-             poke = json.load(pokedex)
-
+    def enseñar_pokedex(self):
+        pokedex = self.inciar_pokedex()
         tabla = []
-        for nombre, datos in poke.items():
+        for nombre, datos in pokedex.items(): # Voy añadiendo los datos de cada carta a la tabla
             tabla.append([nombre, datos["rareza"], datos["tipo"], datos["num_pokedex"]])
 
         os.system('cls' if os.name == 'nt' else 'clear')
         print(tabulate(tabla, headers=["Nombre", "Rareza", "Tipo", "N° Pokédex"], tablefmt="fancy_grid"))
         
     def guardar_pokedex(self, pokedex):
-        # Ordenar por número de Pokédex y volver a convertir a diccionario
+        # Ordeno el contenido del archivo por número de Pokédex
         pokedex_ordenada = dict(sorted(pokedex.items(), key=lambda item: item[1]["num_pokedex"]))
+        
         with open('pokedex.json', "w", encoding="utf-8") as poke_guardar:
             json.dump(pokedex_ordenada, poke_guardar, indent=4, ensure_ascii=False)
         
     def anhadir_carta(self, sobre):
-        """Añade nuevas cartas a la Pokédex, sumando cantidad si ya existen."""
-        pokedex = self.mostrar_pokedex()
+        pokedex = self.inciar_pokedex()
         
-        for carta in sobre:
+        for carta in sobre: # Para cada carta en el sobre, se añade a la Pokédex
             nombre = carta.nombre
             if nombre in pokedex:
                 pokedex[nombre]["cantidad"] += 1  # Si la carta obtenida ya está en la Pokédex, se añade 1 a la cantidad
@@ -39,24 +45,3 @@ class Pokedex:
                 }
 
         self.guardar_pokedex(pokedex)
-
-
-if __name__ == "__main__":
-    cartas = {"Bulbasaur": {
-            "nombre": "Bulbasaur",
-            "rareza": "*",
-            "tipo": "planta",
-            "num_pokedex": 1
-        },
-        "Ivysaur": {
-            "nombre": "Ivysaur",
-            "rareza": "**",
-            "tipo": "planta",
-            "num_pokedex": 2
-        }}
-    print(cartas)
-    p = Pokedex()
-
-    print(p.anhadir_carta(cartas))
-
-    
