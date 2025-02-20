@@ -1,30 +1,37 @@
 {
-    "Bellsprout": {
-        "nombre": "Bellsprout",
-        "tipo": "planta",
-        "rareza": "*",
-        "num_pokedex": 27,
-        "cantidad": 5
+    "Charizard": {
+        "nombre": "Charizard",
+        "tipo": "fuego",
+        "rareza": "****",
+        "num_pokedex": 6,
+        "cantidad": 3
     },
-    "Golem": {
-        "nombre": "Golem",
-        "tipo": "roca",
+    "Ninetales": {
+        "nombre": "Ninetales",
+        "tipo": "fuego",
         "rareza": "***",
-        "num_pokedex": 34,
-        "cantidad": 5
+        "num_pokedex": 13,
+        "cantidad": 2
     },
-    "Tangela": {
-        "nombre": "Tangela",
-        "tipo": "planta",
-        "rareza": "**",
-        "num_pokedex": 48,
+    "Magneton": {
+        "nombre": "Magneton",
+        "tipo": "eléctrico",
+        "rareza": "***",
+        "num_pokedex": 40,
         "cantidad": 4
     },
-    "Aerodactyl EX": {
-        "nombre": "Aerodactyl EX",
-        "tipo": "roca",
-        "rareza": "*****",
-        "num_pokedex": 55,
+    "Magmar": {
+        "nombre": "Magmar",
+        "tipo": "fuego",
+        "rareza": "**",
+        "num_pokedex": 49,
         "cantidad": 1
+    },
+    "Flareon": {
+        "nombre": "Flareon",
+        "tipo": "fuego",
+        "rareza": "**",
+        "num_pokedex": 54,
+        "cantidad": 5
     }
 }

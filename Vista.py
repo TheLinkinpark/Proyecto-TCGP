@@ -5,7 +5,7 @@ class Vista:
     def bienvenida(self) -> None:
         os.system('cls' if os.name == 'nt' else 'clear')
         print("=" * 56)
-        print("¡Bienvendx al Juego de Cartas Coleccionables de Pokémon!")
+        print("¡Bienvenidx al Juego de Cartas Coleccionables de Pokémon!")
         print("=" * 56)
         print('''
 En este juego podrás abrir sobres de Pokémon y coleccionar las cartas en tu Pokédex.
@@ -14,14 +14,12 @@ Dispones de 3 tipos de sobre para abrir, los cuales son:
     2. Raíces y rocas
     3. Mareas místicas
 
-En ellos podrás encontrar desde cartas muy comunes hasta cartas rarísimas, incluyendo a los Pokémon legendarios.
-
-    ''')
+En ellos podrás encontrar desde cartas muy comunes hasta cartas rarísimas, incluyendo a los Pokémon legendarios.''')
         
     def primer_sobre(self):
         print('''
 Al ser tu primera vez en el juego, has recibido un sobre gratuito para que puedas empezar a conseguir cartas.
-Si quieres seguir abrindo sobres, tendrás que conseguir PokéPuntos jugando en la ruleta.
+Si quieres seguir abriendo sobres, tendrás que conseguir PokéPuntos jugando en la ruleta.
 ''')
         return input("¿Quieres abrir el sobre? Si dices que no, no podrás volver a obtenerlo (s/n): ")
     
@@ -97,10 +95,11 @@ Si quieres seguir abrindo sobres, tendrás que conseguir PokéPuntos jugando en 
             for linea1, linea2, linea3 in zip(sobre1, sobre2, sobre3):
                 print(f"{linea1}   {linea2}   {linea3}")
 
-            return int(input("Introduce el número del sobre que quieres abrir: "))
+            return int(input("Introduce el número del sobre que quieres abrir (1-3): "))
 
         else:
-                print("No tienes los puntos suficientes para abrir un sobre. ¡Consigue más puntos!")
+            input("No tienes puntos suficientes para abrir un sobre. Pulsa cualquier tecla para volver al menú principal: ")
+
 
     def jugar_ruleta(self):
         os.system('cls' if os.name == 'nt' else 'clear')

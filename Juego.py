@@ -6,6 +6,7 @@ from Vista import Vista
 from time import sleep
 import os
 
+
 class Juego:
     pokemon: Pokemon
     pokedex: Pokedex
@@ -52,8 +53,10 @@ class Juego:
             print("Espera unos segundos, se están generando las cartas...")
             sleep(2)       
             print(self.sobre.abrir_sobre())
+            print("ACLARACIÓN: El contenido de las cartas se basa en su nombre, tipo, rareza(*) y nº de pokédex.")
 
             input("Pulsa cualquier tecla para continuar: ")
+            sleep(1)
         else:
              print("Has desaprovechado esta oportunidad, es una pena...")
 
@@ -79,8 +82,9 @@ class Juego:
             sleep(2)
             print(self.sobre.abrir_sobre())
 
+            print("ACLARACIÓN: El contenido de las cartas se basa en su nombre, tipo, rareza(*) y nº de pokédex.")
             input("Pulsa cualquier tecla para continuar: ")
-            sleep(2)
+            sleep(1)
 
 
     def opcion_ruleta(self): # Al igual que opcion_sobre, si el jugador decide jugar a la ruleta, se llamará a este método
@@ -91,15 +95,22 @@ class Juego:
 
     def jugar(self):
         juego = True
-        pts_sobre = 10
+        pts_sobre = 0
+        
 
         while juego:
             os.system('cls' if os.name == 'nt' else 'clear')
             self.vista.mostrar_menu()
-            opcion = int(input("Introduce tu opción: "))
 
-            while opcion < 1 or opcion > 4: # Compruebo que el jugador escoge una opción válida para el menú
-                opcion = int(input("Opción no válida, vuelve a introducirla: "))
+            opcion = 0
+
+            opcion = int(input("Introduce una opción: "))
+
+            while opcion < 1 or opcion > 5: # Compruebo que el jugador escoge una opción válida para el menú
+                    opcion = int(input("Opción incorrecta, vuelve a intentarlo: "))
+
+
+
 
 
             match opcion:
@@ -111,7 +122,11 @@ class Juego:
                         self.vista.puntos_abrir_sobre(False)
 
                 case 2:
-                    self.pokedex.enseñar_pokedex()
+                    if self.pokedex.cantidad_cartas() == 0:
+                        print("No tienes ninguna carta en la Pokédex.")
+                    else:
+                        self.pokedex.enseñar_pokedex()
+
                     input("Pulsa cualquier tecla para volver al menú principal: ")
 
                 case 3:
@@ -136,6 +151,7 @@ class Juego:
                         print(f"PokéPuntos: {pts_sobre}")
                         print()
                         input("Pulsa cualquier tecla para volver al menú principal: ")
+                        
                         sleep(1)
                 
                               
