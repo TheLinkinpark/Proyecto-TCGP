@@ -1,0 +1,30 @@
+{
+    "Bellsprout": {
+        "nombre": "Bellsprout",
+        "tipo": "planta",
+        "rareza": "*",
+        "num_pokedex": 27,
+        "cantidad": 5
+    },
+    "Golem": {
+        "nombre": "Golem",
+        "tipo": "roca",
+        "rareza": "***",
+        "num_pokedex": 34,
+        "cantidad": 5
+    },
+    "Tangela": {
+        "nombre": "Tangela",
+        "tipo": "planta",
+        "rareza": "**",
+        "num_pokedex": 48,
+        "cantidad": 4
+    },
+    "Aerodactyl EX": {
+        "nombre": "Aerodactyl EX",
+        "tipo": "roca",
+        "rareza": "*****",
+        "num_pokedex": 55,
+        "cantidad": 1
+    }
+}

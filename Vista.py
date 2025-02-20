@@ -34,12 +34,14 @@ Si quieres seguir abrindo sobres, tendrás que conseguir PokéPuntos jugando en 
 
 1. Abrir sobre      3. Ruleta PokéPuntos
 
-2. Ver Pokédex      4. Salir
+2. Ver Pokédex      4. Estadísticas jugador
+
+             5. Salir
 
 {"=" * 40}
 ''')
 
-    
+
     def puntos_abrir_sobre(self, pts_necesarios: bool): # 
         if pts_necesarios:
             os.system('cls' if os.name == 'nt' else 'clear')

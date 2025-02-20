@@ -1,13 +1,10 @@
-import random
-import json
-
 class Pokemon:
     nombre: str
     tipo: str
     rareza: str
     num_pokedex: int
 
-    def __init__(self, nombre, tipo, rareza, num_pokedex) -> None:
+    def __init__(self, nombre: str, tipo: str, rareza: str, num_pokedex: int) -> None:
         self.nombre = nombre
         self.tipo = tipo
         self.rareza = rareza

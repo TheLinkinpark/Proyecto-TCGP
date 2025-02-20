@@ -53,7 +53,7 @@ class Juego:
             sleep(2)       
             print(self.sobre.abrir_sobre())
 
-            tecla = input("Pulsa cualquier tecla para continuar: ")
+            input("Pulsa cualquier tecla para continuar: ")
         else:
              print("Has desaprovechado esta oportunidad, es una pena...")
 
@@ -79,11 +79,12 @@ class Juego:
             sleep(2)
             print(self.sobre.abrir_sobre())
 
-            tecla = input("Pulsa cualquier tecla para continuar: ")
+            input("Pulsa cualquier tecla para continuar: ")
+            sleep(2)
 
 
     def opcion_ruleta(self): # Al igual que opcion_sobre, si el jugador decide jugar a la ruleta, se llamará a este método
-        r = Ruleta([50, -10, 20, 5, 0, 100, 10])
+        r = Ruleta((50, -10, 20, 5, 0, 100, 10))
         resultado = r.girar_ruleta()
         return resultado
 
@@ -104,14 +105,14 @@ class Juego:
             match opcion:
 
                 case 1:
-                    if pts_sobre >= 10:
+                    if pts_sobre >= 10: # Para abrir un sobre, necesitas por lo menos 10 PokéPuntos
                         self.opcion_sobre()                      
                     else:
                         self.vista.puntos_abrir_sobre(False)
 
                 case 2:
                     self.pokedex.enseñar_pokedex()
-                    tecla = input("Pulsa cualquier tecla para volver al menú principal: ")
+                    input("Pulsa cualquier tecla para volver al menú principal: ")
 
                 case 3:
 
@@ -126,5 +127,23 @@ class Juego:
                         ruleta = input("¿Quieres volver a jugar a la ruleta PokéPuntos?(s/n) ")
             
                 case 4:
+                        print(f'''
+{"=" * 40}
+{" " * 8}{"ESTADÍSTICAS DE JUGADOR".center(1)}{" " * 40}
+{"=" * 40}''')
+                        print(f"Cartas desbloqueadas: {self.pokedex.cantidad_cartas()}/60")
+                        print()
+                        print(f"PokéPuntos: {pts_sobre}")
+                        print()
+                        input("Pulsa cualquier tecla para volver al menú principal: ")
+                        sleep(1)
+                
+                              
+                case 5:
                     print("¡Hasta la próxima!")
                     juego = False
+
+if __name__ == "__main__":
+    juego = Juego()
+
+    juego.jugar()
